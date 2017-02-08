@@ -23,3 +23,10 @@ read textValue
 
 #Generate commit message
 commitMsg="$tagName:$textValue"
+
+#Commit the staged files"
+git commit -m "$commitMsg"
+echo "=================================================================================="
+echo "Commit Message:$commitMsg"
+echo "=================================================================================="
+echo "**************** Note:use 'git push' to push to remote repository ****************"
