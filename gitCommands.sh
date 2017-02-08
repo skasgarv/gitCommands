@@ -6,4 +6,7 @@ echo "==========================================================================
 branchName=$(echo `git branch  | sed -n '/\* /s///p'|cut -d "/" -f2`); 
 #Extract ticket number 
 ticketNumber=$(echo $branchName |cut -d "-" -f2); 
-echo $ticketNumber
+
+gitTag="skasgarv-" #modify to suit the tag name 
+#concatenate ticket number and tag name
+tagName="$gitTag$ticketNumber" 
